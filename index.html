@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<!----------    HEADER  ---------->
     <div id="particles-js"></div>
-    <jacob> <img src="/images/jacob.jpg"> </jacob>
     <div id = "header">
+        <jacob> <img src="/images/jacob.jpg"> </jacob>
         <div class = "container">
             <nav>
                 <ul>
@@ -29,10 +29,131 @@
     </div>
 
 
+<!---------- ABOUT ME    ---------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-column-1">
+                    <img src="/images/IMG_2212.jpeg">
+                </div>
+                <div class="about-column-2">
+                    <h1 class = "sub-title">About Me</h1>
+                    <p>Hi my name is Jacob.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Making Website</li>
+                            <li><span>UI/UX</span><br>Making Website</li>
+                            <li><span>UI/UX</span><br>Making Website</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>July 2022 - August 2022</span><br>Apple Applied Research Extern</li>
+                            <li><span>June 2021 - August 2021</span><br>Machine/Mechanical Engineering Assistant</li>
+                            <li><span>June 2019 - July 2019</span><br>OsiSoft Academic Engineering Intern</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Present</span><br> Stuying for a B.A. in Arts & Media Engineering & Technology</li>
+                            <li><span>2020</span><br>High School Degree from Eastside College Preporatory School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!---------- PORTFOLIO ---------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.JPG">
+                    <div class="layer">
+                        <h2>Example Project</h2>
+                        <p> Example Project Text</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work1.JPG">
+                    <div class="layer">
+                        <h2>Example Project</h2>
+                        <p> Example Project Text</p>
+                        <i class="fas fa-external-link"></i>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work1.JPG">
+                    <div class="layer">
+                        <h2>Example Project</h2>
+                        <p> Example Project Text</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!----------  CONTACT  ---------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="'sub-title">Contact Me</h1>
+                    <p>contact@example.com</p>
+                    <p>0123456789</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"p></textarea>
+                        <button type="submit">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="particles.js"></script>
     <script src="app.js"></script>
 
 
     
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+
 </body>
 </html>

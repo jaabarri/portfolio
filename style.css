@@ -21,7 +21,7 @@ body{
 
 
 jacob img{
-    border-radius: 20%;
+    border-radius: 13%;
     margin-top: 10%;
     margin-right: 10%;
     float: right;
@@ -36,7 +36,7 @@ jacob img{
 
 nav ul li a {
     text-decoration: none;
-    color: #8b94ba;
+    color: #949fcf;
     font-size: 20px; 
     position: relative;
 }
@@ -69,3 +69,176 @@ nav ul li{
     color: #34ebe5;
 }
 
+
+/*--------------------- ABOUT ------------------------ */
+.about-column-1 img {
+    width: 400px;
+    height: auto;
+    border-radius: 5%;
+}
+
+#about{
+    padding-top: 24.5%;
+    padding-bottom: 3%;
+    color:#7cb5eb
+}
+
+.row {
+    display: flex; /* Display Side by side */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-column-1{
+    flex-basis: 35%;
+}
+
+.about-column-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color:#87c5ff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 75px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tab-links::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: #34ebe5;
+    transition: .5s;
+}
+
+.tab-links:hover::after{
+    width: 100%;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+.tab-contents ul li span{
+    color:#2abbb6
+}
+
+.tab-contents{
+    display: none; /*Hide All of the tab Conents */
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* --------------------------- Portfolio ------------------- */
+
+#portfolio{
+    padding: 50px 0;
+    color: white;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    border-radius: 20px;
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(#142440, #34ebe5);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+/*-------------- Contact ----------------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-right form{
+    width: 100%;
+
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
